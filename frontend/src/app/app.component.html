@@ -1,0 +1,22 @@
+<router-outlet></router-outlet>
+
+
+<table cellspacing="0" cellpadding="0">
+    <colgroup span="7"></colgroup>
+    <tbody>
+      <tr class="days">
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Agência</th>
+        <th>Número</th>
+        <th>Saldo</th>
+      </tr>
+      <tr *ngFor="let conta of contas">
+          <td >{{ conta.id }}</td>
+          <td ><a routerLink="/transacoes/:{{conta.id}}" ng-click="redirectClick()">{{ conta.nome }}</a></td>
+          <td >{{ conta.numeroAgencia }}</td>
+          <td >{{ conta.numeroConta }}</td>
+          <td >{{ conta.saldo }}</td>
+      </tr>
+  </tbody>
+</table>
