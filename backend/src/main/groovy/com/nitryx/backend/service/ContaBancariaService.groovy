@@ -38,7 +38,12 @@ class ContaBancariaService {
     }
 
     public List<TransacaoContaBancariaQuery> transacoesContaBancaria(Long id){
-        String query =  new StringBuilder("SELECT DATAHORA FROM  TRANSACAO")
+        //Essa query funciona no banco H2 do navegador, mas não funciona aqui, não consegui descobrir porque :(
+//        String query = "SELECT CONTA_BANCARIA.ID, DATAHORA, VALOR, SALDO " +
+//                "FROM CONTA_BANCARIA INNER JOIN CONTA_BANCARIA_TRANSACOES ON CONTA_BANCARIA.ID = CONTA_BANCARIA_TRANSACOES.CONTA_BANCARIA_ID " +
+//                "INNER JOIN TRANSACAO ON TRANSACAO.ID = CONTA_BANCARIA_TRANSACOES.TRANSACOES " +
+//                "WHERE CONTA_BANCARIA.ID = ?";
+        String query =  new StringBuilder("SELECT ID, DATAHORA, VALOR FROM  TRANSACAO")
         System.out.println(query)
         return jdbcTemplate.query(query, new TransacaoContaBancariaMapper());
     }

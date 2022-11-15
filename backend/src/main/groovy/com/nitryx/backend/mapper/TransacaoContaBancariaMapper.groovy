@@ -11,9 +11,9 @@ class TransacaoContaBancariaMapper implements RowMapper<TransacaoContaBancariaQu
     public TransacaoContaBancariaQuery mapRow(ResultSet resultSet, int i) throws SQLException {
 
         TransacaoContaBancariaQuery conta = new TransacaoContaBancariaQuery();
-//        conta.setId(resultSet.getLong("id"));
+        conta.setId(resultSet.getLong("id"));
         conta.setDataHora(resultSet.getString("datahora"));
-//        conta.setValor(resultSet.getFloat("valor"));
+        conta.setValor(resultSet.getFloat("valor"));
 //        conta.setSaldoAnterior(resultSet.getFloat("saldo"));
 
 

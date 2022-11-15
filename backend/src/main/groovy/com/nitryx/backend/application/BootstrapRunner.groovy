@@ -48,23 +48,23 @@ class BootstrapRunner implements ApplicationRunner {
         contaBancariaService.debitar(1, 51);
         contaBancariaService.transferir(1, 2, 56);
 
-        List<ContaBancariaQuery> lista = contaBancariaService.todasContasBancarias();
-
-        for(ContaBancariaQuery index : lista){
-            System.out.println(index.getNome());
-        }
-
-        List<ContaBancariaQuery> lista3 = contaBancariaService.todasContasBancarias();
-
-        for(ContaBancariaQuery index : lista3){
-            System.out.println(index.getNome());
-        }
-
-        List<TransacaoContaBancariaQuery> lista2 = contaBancariaService.transacoesContaBancaria(1);
-
-        for(TransacaoContaBancariaQuery index : lista2){
-            System.out.println(index.getDataHora());
-        }
+//        List<ContaBancariaQuery> lista = contaBancariaService.todasContasBancarias();
+//
+//        for(ContaBancariaQuery index : lista){
+//            System.out.println(index.getNome());
+//        }
+//
+//        List<ContaBancariaQuery> lista3 = contaBancariaService.todasContasBancarias();
+//
+//        for(ContaBancariaQuery index : lista3){
+//            System.out.println(index.getNome());
+//        }
+//
+//        List<TransacaoContaBancariaQuery> lista2 = contaBancariaService.transacoesContaBancaria(1);
+//
+//        for(TransacaoContaBancariaQuery index : lista2){
+//            System.out.println(index.getDataHora());
+//        }
 
 
 
