@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(): void {
-    console.log(this.list());
+    this.list()
   }
   list() {
       return this.http.get<Conta[]>("http://localhost:8080/contas").subscribe(dados => this.contas = dados);

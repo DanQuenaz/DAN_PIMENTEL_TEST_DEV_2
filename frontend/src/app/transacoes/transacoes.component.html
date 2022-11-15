@@ -1,1 +1,15 @@
-<p>transacoes works!</p>
+<table cellspacing="0" cellpadding="0">
+    <colgroup span="7"></colgroup>
+    <tbody>
+      <tr class="days">
+        <th>ID</th>
+        <th>Data/Hora</th>
+        <th>Valor</th>
+      </tr>
+      <tr *ngFor="let transacao of transacoes">
+          <td >{{ transacao.id }}</td>
+          <td >{{ transacao.dataHora }}</td>
+          <td >{{ transacao.valor }}</td>
+      </tr>
+  </tbody>
+</table>
